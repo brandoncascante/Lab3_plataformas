@@ -32,6 +32,63 @@ class Matriz:
             matriz.append(' '.join(self.filas))
             impresion = '\n'.join(matriz)
         return '{}'.format(impresion)
+    def __add__(self, other):
+        '''Se define la lista en la que se guardará las filas de la mtriz
+         resultante al sumar las matrices.'''
+        suma = []
+
+        # Se obtiene la cantidad de columnas de la segunda matriz
+        for x in other.lista:
+            columnas_2 = len(x)
+        ''' Se comprueba que la cantidad de filas y la  cantidad de columnas de
+        las matrices sean iguales mediante el if, en caso de que las filas, las
+        columnas o ambas sean diferentes se imprimirá un mensaje de error'''
+        if self.n == len(other.lista) and self.m == columnas_2:
+            for i in range(self.n):
+                '''Se define una lista en la que se guardará los valores de
+                cada fila de la matriz resultante.'''
+                fila_resultante = []
+                for j in range(len(self.lista[i])):
+                    fila_resultante.append(self.lista[i][j]+other.lista[i][j])
+                suma.append(fila_resultante)
+
+        elif self.n != len(other.lista) and self.m != columnas_2:
+            suma = 'Error, la cantidad de filas y columnas son diferentes'
+
+        elif self.n != len(other.lista):
+            suma = 'Error, la cantidad de filas son diferentes'
+
+        elif self.m != columnas_2:
+            suma = 'Error, la cantidad de columnas son diferentes'
+        return suma
+    def __sub__(self, other):
+        '''Se define la lista en la que se guardará las filas de la matriz
+        resultante al restar las matrices.'''
+        resta = []
+        # Se obtiene la cantidad de columnas de la segunda matriz
+        for x in other.lista:
+            columnas_2 = len(x)
+        ''' Se comprueba que la cantidad de filas y la  cantidad de columnas de
+        las matrices sean iguales mediante el if, en caso de que las filas, las
+        columnas o ambas sean diferentes se imprimirá un mensaje de error'''
+        if self.n == len(other.lista) and self.m == columnas_2:
+            for i in range(self.n):
+                '''Se define una lista en la que se guardará los valores de
+                cada fila de la matriz resultante.'''
+                fila_resultante = []
+                for j in range(len(self.lista[i])):
+                    fila_resultante.append(self.lista[i][j]-other.lista[i][j])
+                resta.append(fila_resultante)
+
+        elif self.n != len(other.lista) and self.m != columnas_2:
+            resta = 'Error la cantidad de filas y columnas son diferentes'
+
+        elif self.n != len(other.lista):
+            resta = 'Error la cantidad de filas son diferentes'
+
+        elif self.m != columnas_2:
+            resta = 'Error la cantidad de columnas son diferentes'
+        return resta
 
 
 if __name__ == '__main__':

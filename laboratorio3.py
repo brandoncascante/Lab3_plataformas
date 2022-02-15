@@ -3,7 +3,13 @@
 # Curso:IE-0117 Programación Bajo Plataformas Abiertas.
 # III ciclo 2021.
 # Laboratorio 2 python.
-# Programa para identificar si hay sub-strings que sean palíndromo.
+# Clase Matriz.
+'''Se crea una clase para representar matrices n x m. Donde n y m se le deben pasar al
+constructor, y son valores enteros positivos. El objeto es inicializado con todos los 
+elementos en 0. Se debe de acceder y modificar los valores de la matriz, además, se 
+añadem métodos para la realizaciòn de sumas, restas y multiplicaciones de matrices'''
+
+# Clase matriz, para reprensetar matrices n x m.
 class Matriz:
     def __init__(self, n, m):
         # Se define la cantidad de filas n.
@@ -17,7 +23,7 @@ class Matriz:
             self.lista.append([])
             for j in range(self.m):
                 self.lista[i].append(0)
-
+    # Mètodo para ara representar como string la matriz.
     def __str__(self):
         '''Se crea una lista de cadenas llamada matriz, en la cual las cadenas
         corresponden a las filas de la matriz. Y mediante el método .join se
@@ -32,6 +38,8 @@ class Matriz:
             matriz.append(' '.join(self.filas))
             impresion = '\n'.join(matriz)
         return '{}'.format(impresion)
+    
+    # Método para sumar matrices.
     def __add__(self, other):
         '''Se define la lista en la que se guardará las filas de la mtriz
          resultante al sumar las matrices.'''
@@ -61,6 +69,8 @@ class Matriz:
         elif self.m != columnas_2:
             suma = 'Error, la cantidad de columnas son diferentes'
         return suma
+    
+    # Método para restar matrices.
     def __sub__(self, other):
         '''Se define la lista en la que se guardará las filas de la matriz
         resultante al restar las matrices.'''

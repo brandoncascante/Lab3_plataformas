@@ -23,7 +23,7 @@ class Matriz:
             self.lista.append([])
             for j in range(self.m):
                 self.lista[i].append(0)
-    # Mètodo para ara representar como string la matriz.
+    # Método para representar como string la matriz.
     def __str__(self):
         '''Se crea una lista de cadenas llamada matriz, en la cual las cadenas
         corresponden a las filas de la matriz. Y mediante el método .join se

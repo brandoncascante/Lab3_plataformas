@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''Autores:
 María Gutiérrez.
-Susan Moraga
+Susan Moraga López - B75140
 Brandon Cascante Rodríguez. B71732.'''
 # Curso:IE-0117 Programación Bajo Plataformas Abiertas.
 # III ciclo 2021.

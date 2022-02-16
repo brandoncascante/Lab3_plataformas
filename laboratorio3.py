@@ -14,7 +14,7 @@ class Matriz:
         # Se define la cantidad de columnas m
         self.m = m
         '''Se obtiene una lista de listas. Es decir, una lista con las filas
-        de la matiz'''
+        de la matriz'''
         self.lista = []
         for i in range(self.n):
             self.lista.append([])
@@ -73,7 +73,7 @@ class Matriz:
         las matrices sean iguales mediante el if, en caso de que las filas, las
         columnas o ambas sean diferentes se imprimirá un mensaje de error'''
         if self.n == len(other.lista) and self.m == other.m:
-            '''Se realiza el algrotimo de resta de matrices mediante los
+            '''Se realiza el algoritmo de resta de matrices mediante los
              siguientes for, en el cual se resta entrada por entrada'''
             for i in range(self.n):
                 for j in range(len(self.lista[i])):
@@ -91,13 +91,14 @@ class Matriz:
 
     def __mul__(self, other):
         '''Se define la matriz vacía en la que se guardará el resultado
-         obtenido al restar las matrices.'''
+         obtenido al multiplicar las matrices.'''
         producto = Matriz(self.n, other.m)
         ''' Se comprueba que la cantidad de filas de la segunda matriz sea
         igual a la  cantidad de columnas de la primera matriz mediante el
          if, en caso de que las filas de que sean diferentes se imprimirá un
          mensaje de error'''
         if self.m == other.n:
+            '''Se realiza el algoritmo para multiplicar matrices'''
             for x in range(self.n):
                 for y in range(other.m):
                     for z in range(other.n):
